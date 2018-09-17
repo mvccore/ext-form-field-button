@@ -172,7 +172,7 @@ class Image
 		return $formViewClass::Format(static::$templates->control, [
 			'id'		=> $this->id,
 			'name'		=> $this->name,
-			'src'		=> htmlspecialchars($this->src, ENT_QUOTES),
+			'src'		=> htmlspecialchars_decode(htmlspecialchars($this->src, ENT_QUOTES), ENT_QUOTES),
 			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
 		]);
 	}
