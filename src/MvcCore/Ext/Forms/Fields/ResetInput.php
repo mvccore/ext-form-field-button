@@ -14,7 +14,7 @@
 namespace MvcCore\Ext\Forms\Fields;
 
 /**
- * Responsibility: init, predispatch and render `<input type="reset">`
+ * Responsibility: init, pre-dispatch and render `<input type="reset">`
  *				   with default text `Reset` and it's supporting JS code.
  *				   Input has no validator and no custom result state.
  */

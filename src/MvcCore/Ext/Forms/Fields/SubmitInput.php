@@ -14,7 +14,7 @@
 namespace MvcCore\Ext\Forms\Fields;
 
 /**
- * Responsibility: init, predispatch and render `<input type="submit">`
+ * Responsibility: init, pre-dispatch and render `<input type="submit">`
  *				   with default text `Submit` and it's supporting JS code.
  *				   Input has it's custom result state configuration and
  *				   input has no validator.

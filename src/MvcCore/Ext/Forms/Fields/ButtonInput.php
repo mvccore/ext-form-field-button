@@ -14,7 +14,7 @@
 namespace MvcCore\Ext\Forms\Fields;
 
 /**
- * Responsibility: init, predispatch and render button based 
+ * Responsibility: init, pre-dispatch and render button based 
  *				   on `<input type="button">` HTML element.
  *				   Button has text `OK` by default and no validators.
  */

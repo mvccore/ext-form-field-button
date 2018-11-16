@@ -14,7 +14,7 @@
 namespace MvcCore\Ext\Forms\Fields;
 
 /**
- * Responsibility: init, predispatch and render submit button  
+ * Responsibility: init, pre-dispatch and render submit button  
  *				   based on `<input>` HTML element with type `image`.
  */
 class Image 

@@ -39,7 +39,7 @@ trait FormAttrs
 	 *   `key1=value1&key2=value2...` string.
 	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_URLENCODED`.
 	 * - `multipart/form-data`
-	 *   Data will not be encoded to url string form, this value is required,
+	 *   Data will not be encoded to URL string form, this value is required,
 	 *   when you are using forms that have a file upload control. 
 	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_MULTIPART`.
 	 * - `text/plain`
@@ -132,7 +132,7 @@ trait FormAttrs
 	 *   `key1=value1&key2=value2...` string.
 	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_URLENCODED`.
 	 * - `multipart/form-data`
-	 *   Data will not be encoded to url string form, this value is required,
+	 *   Data will not be encoded to URL string form, this value is required,
 	 *   when you are using forms that have a file upload control. 
 	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_MULTIPART`.
 	 * - `text/plain`
@@ -155,7 +155,7 @@ trait FormAttrs
 	 *   `key1=value1&key2=value2...` string.
 	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_URLENCODED`.
 	 * - `multipart/form-data`
-	 *   Data will not be encoded to url string form, this value is required,
+	 *   Data will not be encoded to URL string form, this value is required,
 	 *   when you are using forms that have a file upload control. 
 	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_MULTIPART`.
 	 * - `text/plain`
