@@ -33,8 +33,8 @@ class Button
 
 	/**
 	 * Default visible button text - `OK`. In extended classes - `Reset` and `Submit`.
-	 * This button text is automaticly checked, if there is at least any 
-	 * visible text and automaticly translated, if any translator `callable` 
+	 * This button text is automatically checked, if there is at least any 
+	 * visible text and automatically translated, if any translator `callable` 
 	 * defined in form instance.
 	 * @var string
 	 */
@@ -92,7 +92,7 @@ class Button
 	 * - Set up field render mode if not defined.
 	 * - Translate label text if necessary.
 	 * - Translate value text if necessary.
-	 * - Set up tabindex if necessary.
+	 * - Set up tab-index if necessary.
 	 * @return void
 	 */
 	public function PreDispatch () {

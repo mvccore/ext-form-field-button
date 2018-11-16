@@ -136,7 +136,7 @@ class Image
 	 * Do not use this method even if you don't develop any form field.
 	 * - Set up field render mode if not defined.
 	 * - Translate label text if necessary.
-	 * - Set up tabindex if necessary.
+	 * - Set up tab-index if necessary.
 	 * - Translate `alt` attribute text if necessary.
 	 * @return void
 	 */
