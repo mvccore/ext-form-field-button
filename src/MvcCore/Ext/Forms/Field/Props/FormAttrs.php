@@ -67,7 +67,7 @@ trait FormAttrs
 	/**
 	 * If the input element is a submit button or image, this Boolean attribute 
 	 * specifies that the form shouldn't be validated before submission. This 
-	 * attribute overrides the novalidate attribute of the element's form owner.
+	 * attribute overrides the `novalidate` attribute of the element's form owner.
 	 * It means there will be no validation on client side, but there is always 
 	 * validation on server side.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formnovalidate
@@ -119,6 +119,7 @@ trait FormAttrs
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetFormAction ($formAction) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formAction = $formAction;
 		return $this;
 	}
@@ -167,6 +168,7 @@ trait FormAttrs
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetFormEnctype ($formEnctype) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formEnctype = $formEnctype;
 		return $this;
 	}
@@ -199,6 +201,7 @@ trait FormAttrs
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetFormMethod ($formMethod) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formMethod = $formMethod;
 		return $this;
 	}
@@ -206,7 +209,7 @@ trait FormAttrs
 	/**
 	 * If the input element is a submit button or image, this Boolean attribute 
 	 * specifies that the form shouldn't be validated before submission. This 
-	 * attribute overrides the novalidate attribute of the element's form owner.
+	 * attribute overrides the `novalidate` attribute of the element's form owner.
 	 * It means there will be no validation on client side, but there is always 
 	 * validation on server side. Only `TRUE` renders the form attribute.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formnovalidate
@@ -219,7 +222,7 @@ trait FormAttrs
 	/**
 	 * If the input element is a submit button or image, this Boolean attribute 
 	 * specifies that the form shouldn't be validated before submission. This 
-	 * attribute overrides the novalidate attribute of the element's form owner.
+	 * attribute overrides the `novalidate` attribute of the element's form owner.
 	 * It means there will be no validation on client side, but there is always 
 	 * validation on server side. Only `TRUE` renders the form attribute.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formnovalidate
@@ -227,6 +230,7 @@ trait FormAttrs
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetFormNoValidate ($formNoValidate = TRUE) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formNoValidate = $formNoValidate;
 		return $this;
 	}
@@ -281,6 +285,7 @@ trait FormAttrs
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetFormTarget ($formTarget) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formTarget = $formTarget;
 		return $this;
 	}

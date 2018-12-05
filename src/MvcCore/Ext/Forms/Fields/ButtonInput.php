@@ -51,7 +51,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField
 	 * - Translate button value if necessary.
 	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\Forms\IForm $form
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\SubmitInput|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetForm (\MvcCore\Ext\Forms\IForm & $form) {
 		parent::SetForm($form);

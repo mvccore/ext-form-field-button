@@ -72,6 +72,7 @@ class Image
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetSrc ($src) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->src = $src;
 		return $this;
 	}
@@ -92,6 +93,7 @@ class Image
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
 	public function & SetAlt ($alt) {
+		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->alt = $alt;
 		return $this;
 	}
@@ -169,7 +171,9 @@ class Image
 			$attrsStr .= (strlen($attrsStr) > 0 ? ' ' : '')
 				. 'form="' . $this->form->GetId() . '"';
 		$formViewClass = $this->form->GetViewClass();
-		return $formViewClass::Format(static::$templates->control, [
+		/** @var $templates \stdClass */
+		$templates = static::$templates;
+		return $formViewClass::Format($templates->control, [
 			'id'		=> $this->id,
 			'name'		=> $this->name,
 			'src'		=> htmlspecialchars_decode(htmlspecialchars($this->src, ENT_QUOTES), ENT_QUOTES),

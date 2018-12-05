@@ -42,7 +42,7 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button
 	 * `$field->jsSupportingFile` property to define path to your javascript file
 	 * relatively from configured `\MvcCore\Ext\Form::SetJsSupportFilesRootDir(...);`
 	 * value. Than you have to add supporting javascript file path into field form 
-	 * in `$field->PreDispatch();` method to render those files immediatelly after form
+	 * in `$field->PreDispatch();` method to render those files immediately after form
 	 * (once) or by any external custom assets renderer configured by:
 	 * `$form->SetJsSupportFilesRenderer(...);` method.
 	 * Or you can add your custom supporting javascript files into response by your 
@@ -59,7 +59,7 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button
 	 * define path to your javascript file relatively from configured 
 	 * `\MvcCore\Ext\Form::SetJsSupportFilesRootDir(...);` value. 
 	 * Than you have to add supporting javascript file path into field form 
-	 * in `$field->PreDispatch();` method to render those files immediatelly after form
+	 * in `$field->PreDispatch();` method to render those files immediately after form
 	 * (once) or by any external custom assets renderer configured by:
 	 * `$form->SetJsSupportFilesRenderer(...);` method.
 	 * Or you can add your custom supporting javascript files into response by your 
