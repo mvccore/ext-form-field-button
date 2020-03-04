@@ -118,7 +118,7 @@ trait FormAttrs
 	 * @param string $formAction 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetFormAction ($formAction) {
+	public function SetFormAction ($formAction) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formAction = $formAction;
 		return $this;
@@ -167,7 +167,7 @@ trait FormAttrs
 	 * @param string $formEnctype 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetFormEnctype ($formEnctype) {
+	public function SetFormEnctype ($formEnctype) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formEnctype = $formEnctype;
 		return $this;
@@ -200,7 +200,7 @@ trait FormAttrs
 	 * @param string $formMethod 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetFormMethod ($formMethod) {
+	public function SetFormMethod ($formMethod) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formMethod = $formMethod;
 		return $this;
@@ -229,7 +229,7 @@ trait FormAttrs
 	 * @param bool|NULL $formNoValidate Only `TRUE` renders the form attribute.
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetFormNoValidate ($formNoValidate = TRUE) {
+	public function SetFormNoValidate ($formNoValidate = TRUE) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formNoValidate = $formNoValidate;
 		return $this;
@@ -284,7 +284,7 @@ trait FormAttrs
 	 * @param string $formTarget 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetFormTarget ($formTarget) {
+	public function SetFormTarget ($formTarget) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->formTarget = $formTarget;
 		return $this;

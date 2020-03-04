@@ -77,7 +77,7 @@ class Button
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Button|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetForm (\MvcCore\Ext\Forms\IForm & $form) {
+	public function SetForm (\MvcCore\Ext\Forms\IForm $form) {
 		parent::SetForm($form);
 		if (!$this->value) $this->throwNewInvalidArgumentException(
 			'No button `value` defined.'

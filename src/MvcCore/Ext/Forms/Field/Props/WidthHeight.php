@@ -52,7 +52,7 @@ trait WidthHeight
 	 * @param int $width
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetWidth ($width) {
+	public function SetWidth ($width) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->width = $width;
 		return $this;
@@ -75,7 +75,7 @@ trait WidthHeight
 	 * @param int $height 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetHeight ($height) {
+	public function SetHeight ($height) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->height = $height;
 		return $this;

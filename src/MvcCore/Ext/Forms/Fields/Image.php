@@ -71,7 +71,7 @@ class Image
 	 * @param string $src 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetSrc ($src) {
+	public function SetSrc ($src) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->src = $src;
 		return $this;
@@ -92,7 +92,7 @@ class Image
 	 * @param string $alt
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetAlt ($alt) {
+	public function SetAlt ($alt) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->alt = $alt;
 		return $this;
@@ -124,7 +124,7 @@ class Image
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Image|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetForm (\MvcCore\Ext\Forms\IForm & $form) {
+	public function SetForm (\MvcCore\Ext\Forms\IForm $form) {
 		parent::SetForm($form);
 		if (!$this->src) $this->throwNewInvalidArgumentException(
 			'No input:image `src` attribute defined.'
@@ -146,7 +146,7 @@ class Image
 		parent::PreDispatch();
 		$this->preDispatchTabIndex();
 		if (!$this->translate) return;
-		$form = & $this->form;
+		$form = $this->form;
 		if ($this->alt !== NULL && $this->alt !== '')
 			$this->alt = $form->translate($this->alt);
 	}

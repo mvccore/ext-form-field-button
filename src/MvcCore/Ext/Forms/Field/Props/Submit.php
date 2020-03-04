@@ -64,7 +64,7 @@ trait Submit
 	 * @param int|NULL $customResultState 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
 	 */
-	public function & SetCustomResultState ($customResultState = \MvcCore\Ext\Forms\IForm::RESULT_NEXT_PAGE) {
+	public function SetCustomResultState ($customResultState = \MvcCore\Ext\Forms\IForm::RESULT_NEXT_PAGE) {
 		/** @var $this \MvcCore\Ext\Forms\IField */
 		$this->customResultState = $customResultState;
 		return $this;
