@@ -32,7 +32,7 @@ class SubmitInput
 	 * Possible values: `submit`.
 	 * @var string
 	 */
-	protected $type = 'submit';
+	protected $type = 'submit-input';
 	
 	/**
 	 * Default visible button text - `Submit`.
@@ -42,6 +42,27 @@ class SubmitInput
 	 * @var string
 	 */
 	protected $value = 'Submit';
+	
+	/**
+	 * Standard field control natural template string.
+	 * @var string
+	 */
+	protected static $templates = [
+		'control'	=> '<input type="submit" id="{id}" name="{name}" value="{value}"{attrs} />',
+	];
+
+	/**
+	 * Create new form `<input type="submit" />` control instance.
+	 * @param array $cfg Config array with public properties and it's 
+	 *					 values which you want to configure, presented 
+	 *					 in camel case properties names syntax.
+	 * @throws \InvalidArgumentException
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 */
+	public function __construct (array $cfg = []) {
+		parent::__construct($cfg);
+		static::$templates = (object) self::$templates;
+	}
 	
 	/**
 	 * This INTERNAL method is called from `\MvcCore\Ext\Form` after field

@@ -24,7 +24,7 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button
 	 * Possible values: `reset`.
 	 * @var string
 	 */
-	protected $type = 'reset';
+	protected $type = 'reset-button';
 
 	/**
 	 * Default visible button text - `Reset`.
@@ -68,6 +68,27 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button
 	 * @var string
 	 */
 	protected $jsSupportingFile = \MvcCore\Ext\Forms\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/fields/reset.js';
+
+	/**
+	 * Standard field control natural template string.
+	 * @var string
+	 */
+	public static $templates = [
+		'control'	=> '<button id="{id}" name="{name}" type="reset"{attrs}>{value}</button>',
+	];
+
+	/**
+	 * Create new form `<button type="reset" />` control instance.
+	 * @param array $cfg Config array with public properties and it's 
+	 *					 values which you want to configure, presented 
+	 *					 in camel case properties names syntax.
+	 * @throws \InvalidArgumentException
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 */
+	public function __construct (array $cfg = []) {
+		parent::__construct($cfg);
+		static::$templates = (object) self::$templates;
+	}
 	
 	/**
 	 * This INTERNAL method is called from `\MvcCore\Ext\Form` just before

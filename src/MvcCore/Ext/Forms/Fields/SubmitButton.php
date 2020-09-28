@@ -30,7 +30,7 @@ class SubmitButton
 	 * Possible values: `submit`.
 	 * @var string
 	 */
-	protected $type = 'submit';
+	protected $type = 'submit-button';
 	
 	/**
 	 * Default visible button text - `Submit`.
@@ -40,7 +40,28 @@ class SubmitButton
 	 * @var string
 	 */
 	protected $value = 'Submit';
+	
+	/**
+	 * Standard field control natural template string.
+	 * @var string
+	 */
+	public static $templates = [
+		'control'	=> '<button id="{id}" name="{name}" type="submit"{attrs}>{value}</button>',
+	];
 
+	/**
+	 * Create new form `<button type="submit" />` control instance.
+	 * @param array $cfg Config array with public properties and it's 
+	 *					 values which you want to configure, presented 
+	 *					 in camel case properties names syntax.
+	 * @throws \InvalidArgumentException
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 */
+	public function __construct (array $cfg = []) {
+		parent::__construct($cfg);
+		static::$templates = (object) self::$templates;
+	}
+	
 	/**
 	 * This INTERNAL method is called from `\MvcCore\Ext\Forms\Field\Rendering` 
 	 * in rendering process. Do not use this method even if you don't develop any form field.

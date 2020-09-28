@@ -28,7 +28,7 @@ class ResetInput
 	 * Possible values: `reset`.
 	 * @var string
 	 */
-	protected $type = 'reset';
+	protected $type = 'reset-input';
 	
 	/**
 	 * Default visible button text - `Reset`.
@@ -72,7 +72,28 @@ class ResetInput
 	 * @var string
 	 */
 	protected $jsSupportingFile = \MvcCore\Ext\Forms\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/assets/reset.js';
+	
+	/**
+	 * Standard field control natural template string.
+	 * @var string
+	 */
+	protected static $templates = [
+		'control'	=> '<input type="reset" id="{id}" name="{name}" value="{value}"{attrs} />',
+	];
 
+	/**
+	 * Create new form `<input type="reset" />` control instance.
+	 * @param array $cfg Config array with public properties and it's 
+	 *					 values which you want to configure, presented 
+	 *					 in camel case properties names syntax.
+	 * @throws \InvalidArgumentException
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 */
+	public function __construct (array $cfg = []) {
+		parent::__construct($cfg);
+		static::$templates = (object) self::$templates;
+	}
+	
 	/**
 	 * This INTERNAL method is called from `\MvcCore\Ext\Form` after field
 	 * is added into form instance by `$form->AddField();` method. Do not 

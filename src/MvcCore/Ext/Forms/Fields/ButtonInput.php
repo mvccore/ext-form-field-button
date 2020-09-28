@@ -28,7 +28,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField
 	 * Possible values: `button`.
 	 * @var string
 	 */
-	protected $type = 'button';
+	protected $type = 'button-input';
 	
 	/**
 	 * Default visible button text - `OK`.
@@ -38,6 +38,27 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField
 	 * @var string
 	 */
 	protected $value = 'OK';
+	
+	/**
+	 * Standard field control natural template string.
+	 * @var string
+	 */
+	protected static $templates = [
+		'control'	=> '<input type="button" id="{id}" name="{name}" value="{value}"{attrs} />',
+	];
+
+	/**
+	 * Create new form `<input type="button" />` control instance.
+	 * @param array $cfg Config array with public properties and it's 
+	 *					 values which you want to configure, presented 
+	 *					 in camel case properties names syntax.
+	 * @throws \InvalidArgumentException
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 */
+	public function __construct (array $cfg = []) {
+		parent::__construct($cfg);
+		static::$templates = (object) self::$templates;
+	}
 	
 	/**
 	 * This INTERNAL method is called from `\MvcCore\Ext\Form` after field
