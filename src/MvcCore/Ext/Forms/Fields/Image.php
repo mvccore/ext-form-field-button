@@ -120,11 +120,11 @@ class Image
 	 * - Set up required.
 	 * - Set up translate boolean property.
 	 * - Check if there is defined any value for `src` attribute.
-	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\Forms\IForm $form
+	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\IForm $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Image|\MvcCore\Ext\Forms\IField
 	 */
-	public function SetForm (\MvcCore\Ext\Forms\IForm $form) {
+	public function SetForm (\MvcCore\Ext\IForm $form) {
 		parent::SetForm($form);
 		if (!$this->src) $this->throwNewInvalidArgumentException(
 			'No input:image `src` attribute defined.'

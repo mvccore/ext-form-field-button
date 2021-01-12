@@ -67,7 +67,7 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button
 	 * `NULL` by default.
 	 * @var string
 	 */
-	protected $jsSupportingFile = \MvcCore\Ext\Forms\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/fields/reset.js';
+	protected $jsSupportingFile = \MvcCore\Ext\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/fields/reset.js';
 
 	/**
 	 * Standard field control natural template string.

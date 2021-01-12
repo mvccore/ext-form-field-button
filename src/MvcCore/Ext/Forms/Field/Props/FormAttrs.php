@@ -37,15 +37,15 @@ trait FormAttrs
 	 * - `application/x-www-form-urlencoded`
 	 *   By default, it means all form values will be encoded to 
 	 *   `key1=value1&key2=value2...` string.
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_URLENCODED`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_URLENCODED`.
 	 * - `multipart/form-data`
 	 *   Data will not be encoded to URL string form, this value is required,
 	 *   when you are using forms that have a file upload control. 
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_MULTIPART`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_MULTIPART`.
 	 * - `text/plain`
 	 *   Spaces will be converted to `+` symbols, but no other special 
 	 *   characters will be encoded.
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_PLAINTEXT`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_PLAINTEXT`.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formenctype
 	 * @var string|NULL
 	 */
@@ -57,8 +57,8 @@ trait FormAttrs
 	 * Use `GET` only if form data contains only ASCII characters.
 	 * Possible values: `'POST' | 'GET'`
 	 * You can use constants:
-	 * - `\MvcCore\Ext\Forms\IForm::METHOD_POST`
-	 * - `\MvcCore\Ext\Forms\IForm::METHOD_GET`
+	 * - `\MvcCore\Ext\IForm::METHOD_POST`
+	 * - `\MvcCore\Ext\IForm::METHOD_GET`
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formmethod
 	 * @var string|NULL
 	 */
@@ -131,15 +131,15 @@ trait FormAttrs
 	 * - `application/x-www-form-urlencoded`
 	 *   By default, it means all form values will be encoded to 
 	 *   `key1=value1&key2=value2...` string.
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_URLENCODED`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_URLENCODED`.
 	 * - `multipart/form-data`
 	 *   Data will not be encoded to URL string form, this value is required,
 	 *   when you are using forms that have a file upload control. 
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_MULTIPART`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_MULTIPART`.
 	 * - `text/plain`
 	 *   Spaces will be converted to `+` symbols, but no other special 
 	 *   characters will be encoded.
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_PLAINTEXT`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_PLAINTEXT`.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formenctype
 	 * @return string|NULL
 	 */
@@ -154,15 +154,15 @@ trait FormAttrs
 	 * - `application/x-www-form-urlencoded`
 	 *   By default, it means all form values will be encoded to 
 	 *   `key1=value1&key2=value2...` string.
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_URLENCODED`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_URLENCODED`.
 	 * - `multipart/form-data`
 	 *   Data will not be encoded to URL string form, this value is required,
 	 *   when you are using forms that have a file upload control. 
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_MULTIPART`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_MULTIPART`.
 	 * - `text/plain`
 	 *   Spaces will be converted to `+` symbols, but no other special 
 	 *   characters will be encoded.
-	 *   Constant: `\MvcCore\Ext\Forms\IForm::ENCTYPE_PLAINTEXT`.
+	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_PLAINTEXT`.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formenctype
 	 * @param string $formEnctype 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
@@ -179,8 +179,8 @@ trait FormAttrs
 	 * Use `GET` only if form data contains only ASCII characters.
 	 * Possible values: `'POST' | 'GET'`
 	 * You can use constants:
-	 * - `\MvcCore\Ext\Forms\IForm::METHOD_POST`
-	 * - `\MvcCore\Ext\Forms\IForm::METHOD_GET`
+	 * - `\MvcCore\Ext\IForm::METHOD_POST`
+	 * - `\MvcCore\Ext\IForm::METHOD_GET`
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formmethod
 	 * @return string|NULL
 	 */
@@ -194,8 +194,8 @@ trait FormAttrs
 	 * Use `GET` only if form data contains only ASCII characters.
 	 * Possible values for `$formMethod` param: `'POST' | 'GET'`
 	 * You can use constants:
-	 * - `\MvcCore\Ext\Forms\IForm::METHOD_POST`
-	 * - `\MvcCore\Ext\Forms\IForm::METHOD_GET`
+	 * - `\MvcCore\Ext\IForm::METHOD_POST`
+	 * - `\MvcCore\Ext\IForm::METHOD_GET`
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formmethod
 	 * @param string $formMethod 
 	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField

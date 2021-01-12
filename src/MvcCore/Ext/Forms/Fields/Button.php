@@ -73,11 +73,11 @@ class Button
 	 * - Set up required.
 	 * - Set up translate boolean property.
 	 * - Check if exists button `value` string.
-	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\Forms\IForm $form
+	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\IForm $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Button|\MvcCore\Ext\Forms\IField
 	 */
-	public function SetForm (\MvcCore\Ext\Forms\IForm $form) {
+	public function SetForm (\MvcCore\Ext\IForm $form) {
 		parent::SetForm($form);
 		if (!$this->value) $this->throwNewInvalidArgumentException(
 			'No button `value` defined.'

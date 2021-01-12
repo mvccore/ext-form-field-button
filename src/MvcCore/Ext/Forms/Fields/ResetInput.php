@@ -71,7 +71,7 @@ class ResetInput
 	 * `NULL` by default.
 	 * @var string
 	 */
-	protected $jsSupportingFile = \MvcCore\Ext\Forms\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/assets/reset.js';
+	protected $jsSupportingFile = \MvcCore\Ext\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/assets/reset.js';
 	
 	/**
 	 * Standard field control natural template string.
@@ -104,11 +104,11 @@ class ResetInput
 	 * - Set up translate boolean property.
 	 * - Check if exists button `value` string.
 	 * - Translate button value if necessary.
-	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\Forms\IForm $form
+	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\IForm $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\ResetInput|\MvcCore\Ext\Forms\IField
 	 */
-	public function SetForm (\MvcCore\Ext\Forms\IForm $form) {
+	public function SetForm (\MvcCore\Ext\IForm $form) {
 		parent::SetForm($form);
 		if (!$this->value) $this->throwNewInvalidArgumentException(
 			'No button `value` defined.'
