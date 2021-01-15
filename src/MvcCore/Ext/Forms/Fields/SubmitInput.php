@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Forms\Fields;
@@ -19,11 +19,11 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   Input has it's custom result state configuration and
  *				   input has no validator.
  */
-class SubmitInput 
-	extends		\MvcCore\Ext\Forms\Field 
-	implements	\MvcCore\Ext\Forms\Fields\IVisibleField, 
-				\MvcCore\Ext\Forms\Fields\ISubmit
-{
+class		SubmitInput 
+extends		\MvcCore\Ext\Forms\Field 
+implements	\MvcCore\Ext\Forms\Fields\IVisibleField, 
+			\MvcCore\Ext\Forms\Fields\ISubmit {
+
 	use \MvcCore\Ext\Forms\Field\Props\VisibleField;
 	use \MvcCore\Ext\Forms\Field\Props\Submit;
 	use \MvcCore\Ext\Forms\Field\Props\FormAttrs;
@@ -57,7 +57,7 @@ class SubmitInput
 	 *					 values which you want to configure, presented 
 	 *					 in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
 	public function __construct (array $cfg = []) {
 		parent::__construct($cfg);
@@ -74,9 +74,9 @@ class SubmitInput
 	 * - Set up translate boolean property.
 	 * - Check if exists button `value` string.
 	 * - Translate button value if necessary.
-	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\IForm $form
+	 * @param \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\SubmitInput|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\SubmitInput
 	 */
 	public function SetForm (\MvcCore\Ext\IForm $form) {
 		parent::SetForm($form);

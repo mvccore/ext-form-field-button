@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Forms\Field\Props;
@@ -19,8 +19,8 @@ namespace MvcCore\Ext\Forms\Field\Props;
  * - `\MvcCore\Ext\Forms\Fields\SubmitButton`
  * - `\MvcCore\Ext\Forms\Fields\SubmitInput`
  */
-trait Submit
-{
+trait Submit {
+
 	/**
 	 * Submit button custom result state to move submit request to custom specific target url.
 	 * There are already build in result states:
@@ -62,7 +62,7 @@ trait Submit
 	 * you have to implement `$form->SubmittedRedirect();` method by your own to redirect
 	 * user submit request by this state to your own specific target url.
 	 * @param int|NULL $customResultState 
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetCustomResultState ($customResultState = \MvcCore\Ext\IForm::RESULT_NEXT_PAGE) {
 		/** @var $this \MvcCore\Ext\Forms\IField */

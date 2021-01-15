@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Forms\Fields;
@@ -19,10 +19,10 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   Button has it's custom result state configuration and
  *				   button has no validator.
  */
-class SubmitButton 
-	extends		\MvcCore\Ext\Forms\Fields\Button 
-	implements	\MvcCore\Ext\Forms\Fields\ISubmit
-{
+class		SubmitButton 
+extends		\MvcCore\Ext\Forms\Fields\Button 
+implements	\MvcCore\Ext\Forms\Fields\ISubmit {
+
 	use \MvcCore\Ext\Forms\Field\Props\Submit;
 	use \MvcCore\Ext\Forms\Field\Props\FormAttrs;
 
@@ -55,7 +55,7 @@ class SubmitButton
 	 *					 values which you want to configure, presented 
 	 *					 in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
 	public function __construct (array $cfg = []) {
 		parent::__construct($cfg);

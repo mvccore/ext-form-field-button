@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Forms\Fields;
@@ -17,11 +17,11 @@ namespace MvcCore\Ext\Forms\Fields;
  * Responsibility: init, pre-dispatch and render submit button  
  *				   based on `<input>` HTML element with type `image`.
  */
-class Image 
-	extends		\MvcCore\Ext\Forms\Field 
-	implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
-				\MvcCore\Ext\Forms\Fields\ISubmit
-{
+class		Image 
+extends		\MvcCore\Ext\Forms\Field 
+implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
+			\MvcCore\Ext\Forms\Fields\ISubmit {
+
 	use \MvcCore\Ext\Forms\Field\Props\VisibleField;
 	use \MvcCore\Ext\Forms\Field\Props\Submit;
 	use \MvcCore\Ext\Forms\Field\Props\FormAttrs;
@@ -69,10 +69,10 @@ class Image
 	 * @requires
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-src
 	 * @param string $src 
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetSrc ($src) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->src = $src;
 		return $this;
 	}
@@ -90,10 +90,10 @@ class Image
 	 * Set alternative button text for `alt` attribute.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-alt
 	 * @param string $alt
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetAlt ($alt) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->alt = $alt;
 		return $this;
 	}
@@ -104,7 +104,7 @@ class Image
 	 *					 values which you want to configure, presented 
 	 *					 in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\Image|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\Image
 	 */
 	public function __construct (array $cfg = []) {
 		parent::__construct($cfg);
@@ -120,9 +120,9 @@ class Image
 	 * - Set up required.
 	 * - Set up translate boolean property.
 	 * - Check if there is defined any value for `src` attribute.
-	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\IForm $form
+	 * @param \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\Image|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\Image
 	 */
 	public function SetForm (\MvcCore\Ext\IForm $form) {
 		parent::SetForm($form);

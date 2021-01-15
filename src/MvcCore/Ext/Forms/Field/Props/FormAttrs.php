@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Forms\Field\Props;
@@ -19,8 +19,8 @@ namespace MvcCore\Ext\Forms\Field\Props;
  * - `\MvcCore\Ext\Forms\Fields\SubmitButton`
  * - `\MvcCore\Ext\Forms\Fields\SubmitInput`
  */
-trait FormAttrs
-{
+trait FormAttrs {
+
 	/**
 	 * The URL that processes the data submitted by the input element,
 	 * if it is a submit button or image. This attribute overrides the
@@ -116,10 +116,10 @@ trait FormAttrs
 	 * `action` attribute of the element's form owner.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formaction
 	 * @param string $formAction 
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormAction ($formAction) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formAction = $formAction;
 		return $this;
 	}
@@ -165,10 +165,10 @@ trait FormAttrs
 	 *   Constant: `\MvcCore\Ext\IForm::ENCTYPE_PLAINTEXT`.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formenctype
 	 * @param string $formEnctype 
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormEnctype ($formEnctype) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formEnctype = $formEnctype;
 		return $this;
 	}
@@ -198,10 +198,10 @@ trait FormAttrs
 	 * - `\MvcCore\Ext\IForm::METHOD_GET`
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formmethod
 	 * @param string $formMethod 
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormMethod ($formMethod) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formMethod = $formMethod;
 		return $this;
 	}
@@ -227,10 +227,10 @@ trait FormAttrs
 	 * validation on server side. Only `TRUE` renders the form attribute.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formnovalidate
 	 * @param bool|NULL $formNoValidate Only `TRUE` renders the form attribute.
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormNoValidate ($formNoValidate = TRUE) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formNoValidate = $formNoValidate;
 		return $this;
 	}
@@ -282,10 +282,10 @@ trait FormAttrs
 	 * - `iframename`:	The response is displayed in a named `<iframe>`.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formtarget
 	 * @param string $formTarget 
-	 * @return \MvcCore\Ext\Forms\Field|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormTarget ($formTarget) {
-		/** @var $this \MvcCore\Ext\Forms\IField */
+		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formTarget = $formTarget;
 		return $this;
 	}

@@ -7,8 +7,8 @@
  * For the full copyright and license information, please view
  * the LICENSE.md file that are distributed with this source code.
  *
- * @copyright	Copyright (c) 2016 Tom Flídr (https://github.com/mvccore/mvccore)
- * @license		https://mvccore.github.io/docs/mvccore/4.0.0/LICENCE.md
+ * @copyright	Copyright (c) 2016 Tom Flidr (https://github.com/mvccore)
+ * @license		https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md
  */
 
 namespace MvcCore\Ext\Forms\Fields;
@@ -19,11 +19,18 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   and types `submit` and `reset` in extended classes.
  *				   Button has text `OK` by default and no validators.
  */
-class Button 
-	extends		\MvcCore\Ext\Forms\Field
-	implements	\MvcCore\Ext\Forms\Fields\IVisibleField
-{
+class		Button 
+extends		\MvcCore\Ext\Forms\Field
+implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
+	
 	use \MvcCore\Ext\Forms\Field\Props\VisibleField;
+	
+	/**
+	 * MvcCore Extension - Form - Field - Button - version:
+	 * Comparison by PHP function version_compare();
+	 * @see http://php.net/manual/en/function.version-compare.php
+	 */
+	const VERSION = '5.0.0';
 
 	/**
 	 * Possible values: `button` and in extended classes `reset` and `submit`.
@@ -54,7 +61,7 @@ class Button
 	 *					 values which you want to configure, presented 
 	 *					 in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\Button|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\Button
 	 */
 	public function __construct(array $cfg = []) {
 		parent::__construct($cfg);
@@ -73,9 +80,9 @@ class Button
 	 * - Set up required.
 	 * - Set up translate boolean property.
 	 * - Check if exists button `value` string.
-	 * @param \MvcCore\Ext\Form|\MvcCore\Ext\IForm $form
+	 * @param \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
-	 * @return \MvcCore\Ext\Forms\Fields\Button|\MvcCore\Ext\Forms\IField
+	 * @return \MvcCore\Ext\Forms\Fields\Button
 	 */
 	public function SetForm (\MvcCore\Ext\IForm $form) {
 		parent::SetForm($form);
