@@ -19,6 +19,7 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   Button has it's custom result state configuration and
  *				   button has no validator.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		SubmitButton 
 extends		\MvcCore\Ext\Forms\Fields\Button 
 implements	\MvcCore\Ext\Forms\Fields\ISubmit {

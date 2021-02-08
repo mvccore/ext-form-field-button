@@ -19,6 +19,7 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   Input has it's custom result state configuration and
  *				   input has no validator.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		SubmitInput 
 extends		\MvcCore\Ext\Forms\Field 
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField, 

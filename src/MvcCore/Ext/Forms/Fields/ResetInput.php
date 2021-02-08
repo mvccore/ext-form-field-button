@@ -18,6 +18,7 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   with default text `Reset` and it's supporting JS code.
  *				   Input has no validator and no custom result state.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		ResetInput 
 extends		\MvcCore\Ext\Forms\Field
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField {

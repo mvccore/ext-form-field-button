@@ -18,6 +18,7 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   on `<input type="button">` HTML element.
  *				   Button has text `OK` by default and no validators.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		ButtonInput 
 extends		\MvcCore\Ext\Forms\Field 
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField {

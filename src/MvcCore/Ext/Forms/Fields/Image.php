@@ -17,6 +17,7 @@ namespace MvcCore\Ext\Forms\Fields;
  * Responsibility: init, pre-dispatch and render submit button  
  *				   based on `<input>` HTML element with type `image`.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		Image 
 extends		\MvcCore\Ext\Forms\Field 
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField,

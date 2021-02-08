@@ -18,6 +18,7 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   with default text `Reset` and it's supporting JS code.
  *				   Button has no validator and no custom result state.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class ResetButton extends \MvcCore\Ext\Forms\Fields\Button {
 
 	/**

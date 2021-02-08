@@ -19,6 +19,7 @@ namespace MvcCore\Ext\Forms\Fields;
  *				   and types `submit` and `reset` in extended classes.
  *				   Button has text `OK` by default and no validators.
  */
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		Button 
 extends		\MvcCore\Ext\Forms\Field
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
@@ -30,7 +31,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.0';
+	const VERSION = '5.0.1';
 
 	/**
 	 * Possible values: `button` and in extended classes `reset` and `submit`.
