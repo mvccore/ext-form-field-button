@@ -15,7 +15,7 @@ namespace MvcCore\Ext\Forms\Fields;
 
 /**
  * Responsibility: init, pre-dispatch and render submit button  
- *				   based on `<input>` HTML element with type `image`.
+ *                 based on `<input>` HTML element with type `image`.
  */
 #[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		Image 
@@ -50,7 +50,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 
 	/**
 	 * Standard field control natural template string.
-	 * @var string
+	 * @var \string[]|\stdClass
 	 */
 	protected static $templates = [
 		'control'	=> '<input type="image" id="{id}" name="{name}" src="{src}"{attrs} />',
@@ -69,7 +69,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 	 * Set displayed image as button background, relative or absolute path.
 	 * @requires
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-src
-	 * @param string $src 
+	 * @param  string $src 
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetSrc ($src) {
@@ -90,7 +90,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 	/**
 	 * Set alternative button text for `alt` attribute.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-alt
-	 * @param string $alt
+	 * @param  string $alt
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetAlt ($alt) {
@@ -101,9 +101,9 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 
 	/**
 	 * Create new form `<input type="image" />` control instance.
-	 * @param array $cfg Config array with public properties and it's 
-	 *					 values which you want to configure, presented 
-	 *					 in camel case properties names syntax.
+	 * @param  array $cfg Config array with public properties and it's 
+	 *                    values which you want to configure, presented 
+	 *                    in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Image
 	 */
@@ -121,7 +121,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 	 * - Set up required.
 	 * - Set up translate boolean property.
 	 * - Check if there is defined any value for `src` attribute.
-	 * @param \MvcCore\Ext\Form $form
+	 * @param  \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Image
 	 */

@@ -15,9 +15,9 @@ namespace MvcCore\Ext\Forms\Fields;
 
 /**
  * Responsibility: init, pre-dispatch and render `<input type="submit">`
- *				   with default text `Submit` and it's supporting JS code.
- *				   Input has it's custom result state configuration and
- *				   input has no validator.
+ *                 with default text `Submit` and it's supporting JS code.
+ *                 Input has it's custom result state configuration and
+ *                 input has no validator.
  */
 #[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		SubmitInput 
@@ -46,7 +46,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 	
 	/**
 	 * Standard field control natural template string.
-	 * @var string
+	 * @var \string[]|\stdClass
 	 */
 	protected static $templates = [
 		'control'	=> '<input type="submit" id="{id}" name="{name}" value="{value}"{attrs} />',
@@ -54,9 +54,9 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 
 	/**
 	 * Create new form `<input type="submit" />` control instance.
-	 * @param array $cfg Config array with public properties and it's 
-	 *					 values which you want to configure, presented 
-	 *					 in camel case properties names syntax.
+	 * @param  array $cfg Config array with public properties and it's 
+	 *                    values which you want to configure, presented 
+	 *                    in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
@@ -69,13 +69,13 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 	 * This INTERNAL method is called from `\MvcCore\Ext\Form` after field
 	 * is added into form instance by `$form->AddField();` method. Do not 
 	 * use this method even if you don't develop any form field.
-	 * - Check if field has any name, which is required.
-	 * - Set up form and field id attribute by form id and field name.
-	 * - Set up required.
-	 * - Set up translate boolean property.
-	 * - Check if exists button `value` string.
-	 * - Translate button value if necessary.
-	 * @param \MvcCore\Ext\Form $form
+	 *  - Check if field has any name, which is required.
+	 *  - Set up form and field id attribute by form id and field name.
+	 *  - Set up required.
+	 *  - Set up translate boolean property.
+	 *  - Check if exists button `value` string.
+	 *  - Translate button value if necessary.
+	 * @param  \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\SubmitInput
 	 */

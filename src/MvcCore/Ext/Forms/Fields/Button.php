@@ -15,9 +15,9 @@ namespace MvcCore\Ext\Forms\Fields;
 
 /**
  * Responsibility: init, pre-dispatch and render button based 
- *				   on `<button>` HTML element with types `button` 
- *				   and types `submit` and `reset` in extended classes.
- *				   Button has text `OK` by default and no validators.
+ *                 on `<button>` HTML element with types `button` 
+ *                 and types `submit` and `reset` in extended classes.
+ *                 Button has text `OK` by default and no validators.
  */
 #[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		Button 
@@ -31,7 +31,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.1';
+	const VERSION = '5.1.2';
 
 	/**
 	 * Possible values: `button` and in extended classes `reset` and `submit`.
@@ -50,7 +50,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 
 	/**
 	 * Standard field control natural template string.
-	 * @var string
+	 * @var \string[]|\stdClass
 	 */
 	public static $templates = [
 		'control'	=> '<button id="{id}" name="{name}" type="{type}"{attrs}>{value}</button>',
@@ -58,9 +58,9 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 
 	/**
 	 * Create new form `<button>` instance.
-	 * @param array $cfg Config array with public properties and it's 
-	 *					 values which you want to configure, presented 
-	 *					 in camel case properties names syntax.
+	 * @param  array $cfg Config array with public properties and it's 
+	 *                    values which you want to configure, presented 
+	 *                    in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Button
 	 */
@@ -81,7 +81,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * - Set up required.
 	 * - Set up translate boolean property.
 	 * - Check if exists button `value` string.
-	 * @param \MvcCore\Ext\Form $form
+	 * @param  \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\Button
 	 */

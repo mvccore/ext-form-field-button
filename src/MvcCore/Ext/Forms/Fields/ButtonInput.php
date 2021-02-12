@@ -15,8 +15,8 @@ namespace MvcCore\Ext\Forms\Fields;
 
 /**
  * Responsibility: init, pre-dispatch and render button based 
- *				   on `<input type="button">` HTML element.
- *				   Button has text `OK` by default and no validators.
+ *                 on `<input type="button">` HTML element.
+ *                 Button has text `OK` by default and no validators.
  */
 #[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		ButtonInput 
@@ -42,7 +42,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	
 	/**
 	 * Standard field control natural template string.
-	 * @var string
+	 * @var \string[]|\stdClass
 	 */
 	protected static $templates = [
 		'control'	=> '<input type="button" id="{id}" name="{name}" value="{value}"{attrs} />',
@@ -50,9 +50,9 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 
 	/**
 	 * Create new form `<input type="button" />` control instance.
-	 * @param array $cfg Config array with public properties and it's 
-	 *					 values which you want to configure, presented 
-	 *					 in camel case properties names syntax.
+	 * @param  array $cfg Config array with public properties and it's 
+	 *                    values which you want to configure, presented 
+	 *                    in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
@@ -71,7 +71,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * - Set up translate boolean property.
 	 * - Check if exists button `value` string.
 	 * - Translate button value if necessary.
-	 * @param \MvcCore\Ext\Form $form
+	 * @param  \MvcCore\Ext\Form $form
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */

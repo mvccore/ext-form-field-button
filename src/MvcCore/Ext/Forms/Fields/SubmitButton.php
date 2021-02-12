@@ -15,9 +15,9 @@ namespace MvcCore\Ext\Forms\Fields;
 
 /**
  * Responsibility: init, pre-dispatch and render `<input type="submit">`
- *				   with default text `Submit` and it's supporting JS code.
- *				   Button has it's custom result state configuration and
- *				   button has no validator.
+ *                 with default text `Submit` and it's supporting JS code.
+ *                 Button has it's custom result state configuration and
+ *                 button has no validator.
  */
 #[\Attribute(\Attribute::TARGET_PROPERTY)]
 class		SubmitButton 
@@ -44,7 +44,7 @@ implements	\MvcCore\Ext\Forms\Fields\ISubmit {
 	
 	/**
 	 * Standard field control natural template string.
-	 * @var string
+	 * @var \string[]|\stdClass
 	 */
 	public static $templates = [
 		'control'	=> '<button id="{id}" name="{name}" type="submit"{attrs}>{value}</button>',
@@ -52,9 +52,9 @@ implements	\MvcCore\Ext\Forms\Fields\ISubmit {
 
 	/**
 	 * Create new form `<button type="submit" />` control instance.
-	 * @param array $cfg Config array with public properties and it's 
-	 *					 values which you want to configure, presented 
-	 *					 in camel case properties names syntax.
+	 * @param  array $cfg Config array with public properties and it's 
+	 *                    values which you want to configure, presented 
+	 *                    in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */

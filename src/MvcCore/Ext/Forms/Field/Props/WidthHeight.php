@@ -49,7 +49,7 @@ trait WidthHeight {
 	 * If the value of the `type` attribute is `image`, this attribute defines
 	 * the `width` of the image displayed for the button in pixels.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-width
-	 * @param int $width
+	 * @param  int $width
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetWidth ($width) {
@@ -72,7 +72,7 @@ trait WidthHeight {
 	 * If the value of the `type` attribute is `image`, this attribute defines
 	 * the `height` of the image displayed for the button in pixels.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-height
-	 * @param int $height 
+	 * @param  int $height 
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetHeight ($height) {

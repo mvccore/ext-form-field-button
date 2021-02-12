@@ -15,8 +15,8 @@ namespace MvcCore\Ext\Forms\Fields;
 
 /**
  * Responsibility: init, pre-dispatch and render `<button type="reset">`
- *				   with default text `Reset` and it's supporting JS code.
- *				   Button has no validator and no custom result state.
+ *                 with default text `Reset` and it's supporting JS code.
+ *                 Button has no validator and no custom result state.
  */
 #[\Attribute(\Attribute::TARGET_PROPERTY)]
 class ResetButton extends \MvcCore\Ext\Forms\Fields\Button {
@@ -72,7 +72,7 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button {
 
 	/**
 	 * Standard field control natural template string.
-	 * @var string
+	 * @var \string[]|\stdClass
 	 */
 	public static $templates = [
 		'control'	=> '<button id="{id}" name="{name}" type="reset"{attrs}>{value}</button>',
@@ -80,9 +80,9 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button {
 
 	/**
 	 * Create new form `<button type="reset" />` control instance.
-	 * @param array $cfg Config array with public properties and it's 
-	 *					 values which you want to configure, presented 
-	 *					 in camel case properties names syntax.
+	 * @param  array $cfg Config array with public properties and it's 
+	 *                    values which you want to configure, presented 
+	 *                    in camel case properties names syntax.
 	 * @throws \InvalidArgumentException
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
