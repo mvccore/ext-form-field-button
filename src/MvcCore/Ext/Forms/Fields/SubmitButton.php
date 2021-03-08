@@ -59,8 +59,12 @@ implements	\MvcCore\Ext\Forms\Fields\ISubmit {
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
 	public function __construct (array $cfg = []) {
+		$selfTemplates = self::$templates;
 		parent::__construct($cfg);
-		static::$templates = (object) self::$templates;
+		static::$templates = (object) array_merge(
+			(array) parent::$templates, 
+			(array) $selfTemplates
+		);
 	}
 	
 	/**
@@ -85,7 +89,6 @@ implements	\MvcCore\Ext\Forms\Fields\ISubmit {
 		return $formViewClass::Format($templates->control, [
 			'id'		=> $this->id,
 			'name'		=> $this->name,
-			'type'		=> $this->type,
 			'value'		=> htmlspecialchars_decode(htmlspecialchars($this->value, ENT_QUOTES), ENT_QUOTES),
 			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
 		]);

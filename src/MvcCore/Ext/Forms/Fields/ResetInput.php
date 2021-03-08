@@ -72,7 +72,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * `NULL` by default.
 	 * @var string
 	 */
-	protected $jsSupportingFile = \MvcCore\Ext\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/assets/reset.js';
+	protected $jsSupportingFile = \MvcCore\Ext\IForm::FORM_ASSETS_DIR_REPLACEMENT . '/fields/reset.js';
 	
 	/**
 	 * Standard field control natural template string.

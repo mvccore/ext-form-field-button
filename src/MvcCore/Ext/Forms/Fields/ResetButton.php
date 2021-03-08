@@ -87,8 +87,12 @@ class ResetButton extends \MvcCore\Ext\Forms\Fields\Button {
 	 * @return \MvcCore\Ext\Forms\Fields\ButtonInput
 	 */
 	public function __construct (array $cfg = []) {
+		$selfTemplates = self::$templates;
 		parent::__construct($cfg);
-		static::$templates = (object) self::$templates;
+		static::$templates = (object) array_merge(
+			(array) parent::$templates, 
+			(array) $selfTemplates
+		);
 	}
 	
 	/**
