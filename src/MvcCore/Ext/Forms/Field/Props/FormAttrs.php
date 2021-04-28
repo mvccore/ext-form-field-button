@@ -18,6 +18,7 @@ namespace MvcCore\Ext\Forms\Field\Props;
  * - `\MvcCore\Ext\Forms\Fields\Image`
  * - `\MvcCore\Ext\Forms\Fields\SubmitButton`
  * - `\MvcCore\Ext\Forms\Fields\SubmitInput`
+ * @mixin \MvcCore\Ext\Forms\Field
  */
 trait FormAttrs {
 
@@ -71,7 +72,7 @@ trait FormAttrs {
 	 * It means there will be no validation on client side, but there is always 
 	 * validation on server side.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formnovalidate
-	 * @var string|NULL
+	 * @var bool|string|NULL
 	 */
 	protected $formNoValidate = NULL;
 	
@@ -119,7 +120,6 @@ trait FormAttrs {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormAction ($formAction) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formAction = $formAction;
 		return $this;
 	}
@@ -168,7 +168,6 @@ trait FormAttrs {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormEnctype ($formEnctype) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formEnctype = $formEnctype;
 		return $this;
 	}
@@ -201,7 +200,6 @@ trait FormAttrs {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormMethod ($formMethod) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formMethod = $formMethod;
 		return $this;
 	}
@@ -213,7 +211,7 @@ trait FormAttrs {
 	 * It means there will be no validation on client side, but there is always 
 	 * validation on server side. Only `TRUE` renders the form attribute.
 	 * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-formnovalidate
-	 * @return string|NULL
+	 * @return bool|NULL
 	 */
 	public function GetFormNoValidate () {
 		return $this->formNoValidate;
@@ -230,7 +228,6 @@ trait FormAttrs {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormNoValidate ($formNoValidate = TRUE) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formNoValidate = $formNoValidate;
 		return $this;
 	}
@@ -285,7 +282,6 @@ trait FormAttrs {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetFormTarget ($formTarget) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->formTarget = $formTarget;
 		return $this;
 	}

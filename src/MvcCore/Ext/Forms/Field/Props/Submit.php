@@ -18,6 +18,7 @@ namespace MvcCore\Ext\Forms\Field\Props;
  * - `\MvcCore\Ext\Forms\Fields\Image`
  * - `\MvcCore\Ext\Forms\Fields\SubmitButton`
  * - `\MvcCore\Ext\Forms\Fields\SubmitInput`
+ * @mixin \MvcCore\Ext\Forms\Field
  */
 trait Submit {
 
@@ -65,7 +66,6 @@ trait Submit {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetCustomResultState ($customResultState = \MvcCore\Ext\IForm::RESULT_NEXT_PAGE) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->customResultState = $customResultState;
 		return $this;
 	}

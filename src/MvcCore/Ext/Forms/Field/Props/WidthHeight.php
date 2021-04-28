@@ -16,6 +16,7 @@ namespace MvcCore\Ext\Forms\Field\Props;
 /**
  * Trait for classes:
  * - `\MvcCore\Ext\Forms\Fields\Image`
+ * @mixin \MvcCore\Ext\Forms\Field
  */
 trait WidthHeight {
 
@@ -53,7 +54,6 @@ trait WidthHeight {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetWidth ($width) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->width = $width;
 		return $this;
 	}
@@ -76,7 +76,6 @@ trait WidthHeight {
 	 * @return \MvcCore\Ext\Forms\Field
 	 */
 	public function SetHeight ($height) {
-		/** @var $this \MvcCore\Ext\Forms\Field */
 		$this->height = $height;
 		return $this;
 	}
