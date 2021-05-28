@@ -168,6 +168,7 @@ implements	\MvcCore\Ext\Forms\Fields\IReset,
 	 * @return \MvcCore\Ext\Forms\Fields\ResetInput
 	 */
 	public function SetForm (\MvcCore\Ext\IForm $form) {
+		if ($this->form !== NULL) return $this;
 		parent::SetForm($form);
 		if (!$this->value) $this->throwNewInvalidArgumentException(
 			'No button `value` defined.'

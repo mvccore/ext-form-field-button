@@ -177,6 +177,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * @return \MvcCore\Ext\Forms\Fields\Button
 	 */
 	public function SetForm (\MvcCore\Ext\IForm $form) {
+		if ($this->form !== NULL) return $this;
 		parent::SetForm($form);
 		if (!$this->value) $this->throwNewInvalidArgumentException(
 			'No button `value` defined.'

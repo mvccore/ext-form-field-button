@@ -301,6 +301,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 	 * @return \MvcCore\Ext\Forms\Fields\Image
 	 */
 	public function SetForm (\MvcCore\Ext\IForm $form) {
+		if ($this->form !== NULL) return $this;
 		parent::SetForm($form);
 		if (!$this->src) $this->throwNewInvalidArgumentException(
 			'No input:image `src` attribute defined.'
