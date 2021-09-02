@@ -201,4 +201,26 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 			$this->value = $this->form->Translate($this->value);
 		$this->preDispatchTabIndex();
 	}
+
+	/**
+	 * @inheritDocs
+	 * @internal
+	 * @return string
+	 */
+	public function RenderControl () {
+		$attrsStr = $this->renderControlAttrsWithFieldVars();
+		if (!$this->form->GetFormTagRenderingStatus()) 
+			$attrsStr .= (strlen($attrsStr) > 0 ? ' ' : '')
+				. 'form="' . $this->form->GetId() . '"';
+		$formViewClass = $this->form->GetViewClass();
+		$view = $this->form->GetView() ?: $this->form->GetController()->GetView();
+		return $formViewClass::Format(static::$templates->control, [
+			'id'		=> $this->id,
+			'name'		=> $this->name,
+			'type'		=> $this->type,
+			'value'		=> $view->EscapeHtml($this->value),
+			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
+		]);
+	}
+
 }

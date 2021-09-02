@@ -349,12 +349,13 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 			$attrsStr .= (strlen($attrsStr) > 0 ? ' ' : '')
 				. 'form="' . $this->form->GetId() . '"';
 		$formViewClass = $this->form->GetViewClass();
+		$view = $this->form->GetView() ?: $this->form->GetController()->GetView();
 		/** @var \stdClass $templates */
 		$templates = static::$templates;
 		return $formViewClass::Format($templates->control, [
 			'id'		=> $this->id,
 			'name'		=> $this->name,
-			'src'		=> htmlspecialchars_decode(htmlspecialchars($this->src, ENT_QUOTES), ENT_QUOTES),
+			'src'		=> $this->src,
 			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
 		]);
 	}
