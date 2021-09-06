@@ -31,7 +31,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.1.7';
+	const VERSION = '5.1.8';
 
 	/**
 	 * Possible values: `button` and in extended classes `reset` and `submit`.
