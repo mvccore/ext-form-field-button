@@ -341,7 +341,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 		if ($this->customResultState !== NULL) 
 			$this->SetControlAttr('data-result', $this->customResultState);
 		if ($this->formNoValidate) $this->formNoValidate = 'formnovalidate';
-		$attrsStr = $this->renderControlAttrsWithFieldVars([
+		$attrsStr = $this->RenderControlAttrsWithFieldVars([
 			'formAction', 'formEnctype', 'formMethod', 'formNoValidate', 'formTarget',
 			'alt', 'width', 'height',
 		]);

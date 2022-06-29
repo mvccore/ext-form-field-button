@@ -241,7 +241,7 @@ implements	\MvcCore\Ext\Forms\Fields\ISubmit {
 		if ($this->customResultState !== NULL) 
 			$this->SetControlAttr('data-result', $this->customResultState);
 		if ($this->formNoValidate) $this->formNoValidate = 'formnovalidate';
-		$attrsStr = $this->renderControlAttrsWithFieldVars([
+		$attrsStr = $this->RenderControlAttrsWithFieldVars([
 			'formAction', 'formEnctype', 'formMethod', 'formNoValidate', 'formTarget'
 		]);
 		if (!$this->form->GetFormTagRenderingStatus()) 
