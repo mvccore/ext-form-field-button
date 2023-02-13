@@ -21,12 +21,13 @@ namespace MvcCore\Ext\Forms\Fields;
 class		Image 
 extends		\MvcCore\Ext\Forms\Field 
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
+			\MvcCore\Ext\Forms\Fields\IFormAttrs,
 			\MvcCore\Ext\Forms\Fields\ISubmit {
 	
 	use \MvcCore\Ext\Forms\Field\Props\WidthHeight;
 	use \MvcCore\Ext\Forms\Field\Props\VisibleField;
-	use \MvcCore\Ext\Forms\Field\Props\Submit;
 	use \MvcCore\Ext\Forms\Field\Props\FormAttrs;
+	use \MvcCore\Ext\Forms\Field\Props\Submit;
 
 	/**
 	 * Possible values: `image` (this type has for all browsers the same behaviour as type `submit`).

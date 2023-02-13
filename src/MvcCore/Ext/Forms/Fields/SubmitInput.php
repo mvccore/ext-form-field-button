@@ -23,11 +23,12 @@ namespace MvcCore\Ext\Forms\Fields;
 class		SubmitInput 
 extends		\MvcCore\Ext\Forms\Field 
 implements	\MvcCore\Ext\Forms\Fields\IVisibleField, 
+			\MvcCore\Ext\Forms\Fields\IFormAttrs, 
 			\MvcCore\Ext\Forms\Fields\ISubmit {
 
 	use \MvcCore\Ext\Forms\Field\Props\VisibleField;
-	use \MvcCore\Ext\Forms\Field\Props\Submit;
 	use \MvcCore\Ext\Forms\Field\Props\FormAttrs;
+	use \MvcCore\Ext\Forms\Field\Props\Submit;
 
 	/**
 	 * Possible values: `submit`.
