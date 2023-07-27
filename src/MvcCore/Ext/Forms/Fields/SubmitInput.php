@@ -280,12 +280,13 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 		if ($this->customResultState !== NULL) 
 			$this->SetControlAttr('data-result', $this->customResultState);
 		if ($this->formNoValidate) $this->formNoValidate = 'formnovalidate';
-		$attrsStr = $this->RenderControlAttrsWithFieldVars([
-			'formAction', 'formEnctype', 'formMethod', 'formNoValidate', 'formTarget'
-		]);
+		$attrsStrItems = [
+			$this->RenderControlAttrsWithFieldVars([
+				'formAction', 'formEnctype', 'formMethod', 'formNoValidate', 'formTarget'
+			])
+		];
 		if (!$this->form->GetFormTagRenderingStatus()) 
-			$attrsStr .= (strlen($attrsStr) > 0 ? ' ' : '')
-				. 'form="' . $this->form->GetId() . '"';
+			$attrsStrItems[] = 'form="' . $this->form->GetId() . '"';
 		$formViewClass = $this->form->GetViewClass();
 		$view = $this->form->GetView() ?: $this->form->GetController()->GetView();
 		/** @var \stdClass $templates */
@@ -295,7 +296,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 			'name'		=> $this->name,
 			'type'		=> $this->type,
 			'value'		=> $view->EscapeAttr($this->value),
-			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
+			'attrs'		=> count($attrsStrItems) > 0 ? ' ' . implode(' ', $attrsStrItems) : '',
 		]);
 	}
 }

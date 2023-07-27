@@ -31,7 +31,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.2.0';
+	const VERSION = '5.2.1';
 
 	/**
 	 * Possible values: `button` and in extended classes `reset` and `submit`.
@@ -208,10 +208,9 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	 * @return string
 	 */
 	public function RenderControl () {
-		$attrsStr = $this->RenderControlAttrsWithFieldVars();
+		$attrsStrItems = [$this->RenderControlAttrsWithFieldVars()];
 		if (!$this->form->GetFormTagRenderingStatus()) 
-			$attrsStr .= (strlen($attrsStr) > 0 ? ' ' : '')
-				. 'form="' . $this->form->GetId() . '"';
+			$attrsStrItems[] = 'form="' . $this->form->GetId() . '"';
 		$formViewClass = $this->form->GetViewClass();
 		$view = $this->form->GetView() ?: $this->form->GetController()->GetView();
 		return $formViewClass::Format(static::$templates->control, [
@@ -219,7 +218,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 			'name'		=> $this->name,
 			'type'		=> $this->type,
 			'value'		=> $view->EscapeHtml($this->value),
-			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
+			'attrs'		=> count($attrsStrItems) > 0 ? ' ' . implode(' ', $attrsStrItems) : '',
 		]);
 	}
 

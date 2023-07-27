@@ -342,22 +342,22 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField,
 		if ($this->customResultState !== NULL) 
 			$this->SetControlAttr('data-result', $this->customResultState);
 		if ($this->formNoValidate) $this->formNoValidate = 'formnovalidate';
-		$attrsStr = $this->RenderControlAttrsWithFieldVars([
-			'formAction', 'formEnctype', 'formMethod', 'formNoValidate', 'formTarget',
-			'alt', 'width', 'height',
-		]);
+		$attrsStrItems = [
+			$this->RenderControlAttrsWithFieldVars([
+				'formAction', 'formEnctype', 'formMethod', 'formNoValidate', 'formTarget',
+				'alt', 'width', 'height',
+			])
+		];
 		if (!$this->form->GetFormTagRenderingStatus()) 
-			$attrsStr .= (strlen($attrsStr) > 0 ? ' ' : '')
-				. 'form="' . $this->form->GetId() . '"';
+			$attrsStrItems[] = 'form="' . $this->form->GetId() . '"';
 		$formViewClass = $this->form->GetViewClass();
-		$view = $this->form->GetView() ?: $this->form->GetController()->GetView();
 		/** @var \stdClass $templates */
 		$templates = static::$templates;
 		return $formViewClass::Format($templates->control, [
 			'id'		=> $this->id,
 			'name'		=> $this->name,
 			'src'		=> $this->src,
-			'attrs'		=> strlen($attrsStr) > 0 ? ' ' . $attrsStr : '',
+			'attrs'		=> count($attrsStrItems) > 0 ? ' ' . implode(' ', $attrsStrItems) : '',
 		]);
 	}
 }
