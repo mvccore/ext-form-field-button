@@ -203,7 +203,7 @@ implements	\MvcCore\Ext\Forms\Fields\IVisibleField {
 	}
 
 	/**
-	 * @inheritDocs
+	 * @inheritDoc
 	 * @internal
 	 * @return string
 	 */
